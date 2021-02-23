@@ -1,8 +1,18 @@
-export default function App() {
+import { ReactElement } from "react";
+import Tabs from "./components/Tabs";
+
+export default function App(): ReactElement {
   return (
-    <div className="text-center bg-purple-300 text-purple-700 text-4xl font-bold">
-      <h1>Hello World</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="text-center text-purple-700 text-4xl font-bold">
+      <h1>Tabs Demo</h1>
+      <Tabs>
+        <div id="Range">
+          This is the <strong>Range Body</strong>!
+        </div>
+        <div id="Overview">
+          This is the <strong>Overview Body</strong>!
+        </div>
+      </Tabs>
     </div>
   );
 }
